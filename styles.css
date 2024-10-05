@@ -61,8 +61,21 @@ header {
     color: var(--antiflash-white);
 }
 
+nav li {
+    font-size: 10px;
+}
+
 h1 {
     font-size: 26px;
+}
+
+.introduction-content h2 {
+    color: var(--chrysler-blue);
+    font-size: 19px;
+}
+
+.introduction-content h5 {
+    font-size: 12px;
 }
 
 
@@ -70,11 +83,11 @@ h1 {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-.outer-container {
-    display: flex;
-    flex-direction: row;
-    border: 2px solid red;
-}
+/*.outer-container {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    border: 2px solid red;*/
+/*}*/
 
 
 /* --------------- 3.2 Other --------------------------- */
@@ -87,13 +100,12 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 400px;
 }
 
 nav {
     flex-direction: row;
     border: 2px dashed blue;
- }
+}
 
 ul {
     display: flex;
@@ -105,15 +117,16 @@ ul {
 li {
     display: flex;
     justify-content: center;
-    flex-basis: 200px;
+    flex-basis: 80px;
     border: 2px solid cyan;
 }
 
 .header-wrapper {
     display: flex;
     justify-content: center;
-    padding: 30px 0 0 0;
+    padding: 30px 0 80px 0;
     border: 2px dotted yellowgreen;
+
 
 }
 
@@ -122,32 +135,57 @@ li {
     flex-direction: column;
     flex-basis: 500px;
     align-items: center;
-    height: 200px;
     border: 2px solid white;
     justify-content: space-between;
+
 }
 
-/*header span {*/
-/*    display: flex;*/
-/*    !*flex-grow: 1;*!*/
-/*    !*width: 100%;*!*/
-/*    !*height: 100%;*!*/
-/*    justify-content: center;*/
-/*    border: 2px dashed lightblue;*/
-/*    */
+.header-content h1 {
+    padding-bottom: 20px;
+}
 
+.header-content p {
+    padding-bottom: 20px;
+}
+
+/*.header-content button {*/
+/*    padding-top: 10px; */
 /*}*/
 
 img {
     position: absolute;
     bottom: 0;
-    left: calc((100vw/2) - 25px);
+    left: calc((100vw / 2) - 25px);
     width: 50px;
     height: 50px;
-    /*border: 2px solid orange;*/
 }
 
 
 /* --------------- 4.2 Introduction ------------------- */
+
+.introduction-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    border: 2px solid rebeccapurple;
+}
+
+.introduction-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    justify-content: space-between;
+    border: 2px dashed darkgreen;
+}
+
+.introduction-content h2 {
+    padding-bottom: 20px;
+}
+
+.introduction-content h5 {
+    padding-top: 50px;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
