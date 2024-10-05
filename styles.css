@@ -12,8 +12,35 @@
     5. Media Queries
 ////////////////////////*/
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*!* CSS HSL *!
+
+--chrysler-blue: #5722cdff;
+--majorelle-blue: #4b49e8ff;
+--magnolia: #f2f0ffff;
+--french-rose: #ed4385ff;
+--night: #0c0c0cff;
+*/
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --chrysler-blue: #5722cd;
+    --majorelle-blue: #4b49e8;
+    --french-rose: #ed4385;
+    --night: #0c0c0c;
+    --magnolia: #f2f0ff;
+    --antiflash-white: #f3f6f9;
+    --gray: #7a7a7a;
+}
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 /* ------------------------------- 3. Layout --------------------------------------- */
