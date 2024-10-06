@@ -14,14 +14,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/*!* CSS HSL *!
-
---chrysler-blue: #5722cdff;
---majorelle-blue: #4b49e8ff;
---magnolia: #f2f0ffff;
---french-rose: #ed4385ff;
---night: #0c0c0cff;
-*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
@@ -56,6 +48,29 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+h1 {
+    font-size: 26px;
+}
+
+h3  {
+    font-size: 14px;
+    text-align: left;
+}
+
+h4 {
+    color: var(--chrysler-blue);
+    text-align: left;
+}
+
+.services-item p {
+    font-size: 8px;
+    font-weight: 300;
+}
+
+.project-item-text p {
+    font-size: 8px;
+}
+
 header {
     background-color: var(--majorelle-blue);
     color: var(--antiflash-white);
@@ -65,9 +80,10 @@ nav li {
     font-size: 10px;
 }
 
-h1 {
-    font-size: 26px;
+button {
+    text-transform: uppercase;
 }
+
 
 .introduction-content h2 {
     color: var(--chrysler-blue);
@@ -76,6 +92,14 @@ h1 {
 
 .introduction-content h5 {
     font-size: 12px;
+}
+
+.project-content a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--chrysler-blue);
+    font-size: 8px;
+    font-weight: 700;
 }
 
 
@@ -126,8 +150,6 @@ li {
     justify-content: center;
     padding: 30px 0 80px 0;
     border: 2px dotted yellowgreen;
-
-
 }
 
 .header-content {
@@ -152,7 +174,7 @@ li {
 /*    padding-top: 10px; */
 /*}*/
 
-img {
+header img {
     position: absolute;
     bottom: 0;
     left: calc((100vw / 2) - 25px);
@@ -186,6 +208,111 @@ img {
 .introduction-content h5 {
     padding-top: 50px;
 }
+
+/* --------------- 4.3 Projects ------------------- */
+
+.project-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100vw;
+    border: 2px dashed darkblue;
+    margin: 50px 20px;
+    row-gap: 30px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid fuchsia;
+
+
+}
+
+.project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.project-item:nth-child(even) .project-item-text{
+    margin-right: 10px;
+}
+
+.project-item img {
+    width: 100%;
+    display: flex;
+    border: 2px dot-dash chartreuse;
+}
+
+.project-item-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    justify-content: center;
+    margin-left: 10px;
+    border: 2px solid crimson;
+
+}
+
+.project-item-text-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 100px;
+
+    border: 2px dashed darkgray;
+}
+
+.project-item-text-inner-container img {
+    width: 20px;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-basis: 60vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border: 2px dotted lightblue;
+
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+.services-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    border: 2px dashed teal;
+}
+
+.services-content {
+    display: flex;
+    flex-basis: 800px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    border: 2px solid cornflowerblue;
+}
+
+.services-item {
+    flex-basis: 150px;
+    border: 2px dotted mediumvioletred;
+    padding: 10px;
+}
+
+.services-item p {
+    padding-top: 10px;
+}
+
+.services-item img {
+    width: 50px;
+}
+
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
