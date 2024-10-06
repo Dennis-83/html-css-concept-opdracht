@@ -52,7 +52,7 @@ h1 {
     font-size: 26px;
 }
 
-h3  {
+h3 {
     font-size: 14px;
     text-align: left;
 }
@@ -102,6 +102,9 @@ button {
     font-weight: 700;
 }
 
+.form-wrapper {
+    color: var(--antiflash-white);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -239,7 +242,8 @@ header img {
 .project-item:nth-child(even) {
     flex-direction: row-reverse;
 }
-.project-item:nth-child(even) .project-item-text{
+
+.project-item:nth-child(even) .project-item-text {
     margin-right: 10px;
 }
 
@@ -286,8 +290,10 @@ header img {
 .services-wrapper {
     display: flex;
     justify-content: center;
-    padding: 0 20px;
+    padding: 20px;
     border: 2px dashed teal;
+
+
 }
 
 .services-content {
@@ -313,6 +319,65 @@ header img {
     width: 50px;
 }
 
+/* --------------- 4.5 Form ------------------- */
+
+
+.form-wrapper {
+    background-color: var(--majorelle-blue);
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    border: 2px dashed darkgoldenrod;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    border: 2px solid deepskyblue;
+}
+
+
+.form-content p {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+label {
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--night);
+
+}
+
+footer p {
+    flex-basis: 20px;
+    color: var(--antiflash-white);
+    font-size: 8px;
+    padding-top: 5px;
+}
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
