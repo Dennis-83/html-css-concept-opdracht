@@ -23,7 +23,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --chrysler-blue: #5722cd;
     --majorelle-blue: #4b49e8;
@@ -32,6 +31,14 @@
     --magnolia: #f2f0ff;
     --antiflash-white: #f3f6f9;
     --gray: #7a7a7a;
+}
+
+button {
+    background-color: var(--french-rose);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 6px hsl(241, 78%, 30%);
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -62,28 +69,21 @@ h4 {
     text-align: left;
 }
 
-.services-item p {
-    font-size: 8px;
-    font-weight: 300;
-}
-
-.project-item-text p {
-    font-size: 8px;
-}
-
 header {
-    background-color: var(--majorelle-blue);
     color: var(--antiflash-white);
 }
 
-nav li {
+nav a {
     font-size: 10px;
+    color: var(--antiflash-white);
+    text-decoration: none;
 }
 
 button {
     text-transform: uppercase;
+    color: var(--antiflash-white);
+    font-size: 10px;
 }
-
 
 .introduction-content h2 {
     color: var(--chrysler-blue);
@@ -94,36 +94,50 @@ button {
     font-size: 12px;
 }
 
-.project-content a {
-    text-transform: uppercase;
+.introduction-content a, .project-content a {
     text-decoration: none;
     color: var(--chrysler-blue);
+}
+
+.project-content a {
+    text-transform: uppercase;
     font-size: 8px;
     font-weight: 700;
+}
+
+.project-item-text p {
+    font-size: 8px;
+}
+
+.services-item p {
+    color: var(--gray);
+    font-size: 8px;
+    font-weight: 300;
 }
 
 .form-wrapper {
     color: var(--antiflash-white);
 }
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+.form-content p {
+    font-size: 10px;
+}
 
-/* --------------- 3.1 Reusables ----------------------- */
+::placeholder {
+    font-family: "Roboto", sans-serif;
+}
 
-/*.outer-container {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    border: 2px solid red;*/
-/*}*/
-
-
-/* --------------- 3.2 Other --------------------------- */
+footer p {
+    color: var(--antiflash-white);
+    font-size: 8px;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
 header {
+    background: linear-gradient(100deg, var(--majorelle-blue), var(--chrysler-blue));
     position: relative;
     display: flex;
     flex-direction: column;
@@ -131,28 +145,28 @@ header {
 
 nav {
     flex-direction: row;
-    border: 2px dashed blue;
+    /*border: 2px dashed blue;*/
 }
 
 ul {
     display: flex;
     list-style: none;
-    border: 2px dashed purple;
     justify-content: flex-end;
+    /*border: 2px dashed purple;*/
 }
 
 li {
     display: flex;
     justify-content: center;
     flex-basis: 80px;
-    border: 2px solid cyan;
+    /*border: 2px solid cyan;*/
 }
 
 .header-wrapper {
     display: flex;
     justify-content: center;
     padding: 30px 0 80px 0;
-    border: 2px dotted yellowgreen;
+    /*border: 2px dotted yellowgreen;*/
 }
 
 .header-content {
@@ -160,8 +174,8 @@ li {
     flex-direction: column;
     flex-basis: 500px;
     align-items: center;
-    border: 2px solid white;
     justify-content: space-between;
+    /*border: 2px solid white;*/
 
 }
 
@@ -173,10 +187,6 @@ li {
     padding-bottom: 20px;
 }
 
-/*.header-content button {*/
-/*    padding-top: 10px; */
-/*}*/
-
 header img {
     position: absolute;
     bottom: 0;
@@ -185,7 +195,6 @@ header img {
     height: 50px;
 }
 
-
 /* --------------- 4.2 Introduction ------------------- */
 
 .introduction-wrapper {
@@ -193,7 +202,7 @@ header img {
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 80px;
-    border: 2px solid rebeccapurple;
+    /*border: 2px solid rebeccapurple;*/
 }
 
 .introduction-content {
@@ -201,7 +210,7 @@ header img {
     flex-direction: column;
     flex-basis: 500px;
     justify-content: space-between;
-    border: 2px dashed darkgreen;
+    /*border: 2px dashed darkgreen;*/
 }
 
 .introduction-content h2 {
@@ -215,28 +224,26 @@ header img {
 /* --------------- 4.3 Projects ------------------- */
 
 .project-wrapper {
+    background-color: var(--antiflash-white);
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .project-content {
     display: flex;
     flex-direction: column;
     flex-basis: 100vw;
-    border: 2px dashed darkblue;
     margin: 50px 20px;
     row-gap: 30px;
+    /*border: 2px dashed darkblue;*/
 }
 
 .project-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid fuchsia;
-
-
+    /*border: 2px solid fuchsia;*/
 }
 
 .project-item:nth-child(even) {
@@ -250,7 +257,7 @@ header img {
 .project-item img {
     width: 100%;
     display: flex;
-    border: 2px dot-dash chartreuse;
+    /*border: 2px dot-dash chartreuse;*/
 }
 
 .project-item-text {
@@ -259,8 +266,7 @@ header img {
     flex-basis: 200px;
     justify-content: center;
     margin-left: 10px;
-    border: 2px solid crimson;
-
+    /*border: 2px solid crimson;*/
 }
 
 .project-item-text-inner-container {
@@ -268,8 +274,7 @@ header img {
     flex-direction: column;
     justify-content: space-between;
     flex-basis: 100px;
-
-    border: 2px dashed darkgray;
+    /*border: 2px dashed darkgray;*/
 }
 
 .project-item-text-inner-container img {
@@ -281,8 +286,8 @@ header img {
     flex-basis: 60vw;
     flex-grow: 0;
     flex-shrink: 1;
-    border: 2px dotted lightblue;
-
+    box-shadow: 0px 4px 5px hsl(0, 0%, 50%);
+    /*border: 2px dotted lightblue;*/
 }
 
 /* --------------- 4.4 Services ------------------- */
@@ -291,9 +296,7 @@ header img {
     display: flex;
     justify-content: center;
     padding: 20px;
-    border: 2px dashed teal;
-
-
+    /*border: 2px dashed teal;*/
 }
 
 .services-content {
@@ -302,13 +305,14 @@ header img {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px 10px;
-    border: 2px solid cornflowerblue;
+    /*border: 2px solid cornflowerblue;*/
 }
 
 .services-item {
     flex-basis: 150px;
-    border: 2px dotted mediumvioletred;
     padding: 10px;
+    box-shadow: 4px 4px 5px hsl(0, 0%, 74%);
+    /*border: 2px dotted mediumvioletred;*/
 }
 
 .services-item p {
@@ -321,27 +325,26 @@ header img {
 
 /* --------------- 4.5 Form ------------------- */
 
-
 .form-wrapper {
-    background-color: var(--majorelle-blue);
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
-    border: 2px dashed darkgoldenrod;
+    background: linear-gradient(100deg, var(--majorelle-blue), var(--chrysler-blue));
+    /*border: 2px dashed darkgoldenrod;*/
 }
 
 .form-content {
     display: flex;
     flex-direction: column;
     flex-basis: 500px;
-    border: 2px solid deepskyblue;
+    /*border: 2px solid deepskyblue;*/
 }
-
 
 .form-content p {
     text-align: center;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -352,9 +355,21 @@ input, textarea {
     width: 100%;
 }
 
+input {
+    padding: 10px 0;
+}
+
+::placeholder {
+    padding: 10px 10px;
+}
+
 label {
     margin-top: 15px;
     align-self: flex-start;
+}
+
+.form-content p {
+    padding-top: 10px;
 }
 
 form button {
@@ -367,17 +382,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background-color: var(--night);
-
 }
 
 footer p {
     flex-basis: 20px;
-    color: var(--antiflash-white);
-    font-size: 8px;
     padding-top: 5px;
 }
-
-
-/* ------------------------------- 5. Media Queries -------------------------------- */

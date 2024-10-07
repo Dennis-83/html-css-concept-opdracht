@@ -9,9 +9,9 @@
 <header>
     <nav>
         <ul>
-            <li>Case Studies</li>
-            <li>Services</li>
-            <li>Contact Us</li>
+            <li><a href="#projects">Case Studies</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
     <div class="header-wrapper">
@@ -38,13 +38,13 @@
                 new
                 digital
                 experiences.</h2>
-            <h5>Have a question? Click here to contact us!</h5>
+            <h5>Have a question? <a href="#contact-us">Click here</a> to contact us!</h5>
         </div>
     </section>
 
     <!-----------------------------Projects---------------------------->
 
-    <section class="project-wrapper">
+    <section class="project-wrapper" id="projects">
         <div class="project-content">
             <article class="project-item">
                 <div class="project-item-text">
@@ -105,7 +105,7 @@
 
     <!-----------------------------Services---------------------------->
 
-    <section class="services-wrapper">
+    <section class="services-wrapper" id="services">
         <div class="services-content">
             <article class="services-item">
                 <img src="./assets/icon_web-design.svg" alt="Web design icon">
@@ -179,7 +179,7 @@
 
     <!-----------------------------Form---------------------------->
 
-    <section class="form-wrapper">
+    <section class="form-wrapper" id="contact-us">
         <div class="form-content">
             <h2>
                 Let's work together
@@ -189,23 +189,20 @@
             </p>
             <form action="/">
                 <label for="name-field">Name</label>
-                <input type="text" name="name" id="name-field" placeholder="Name" />
+                <input type="text" name="name" id="name-field" placeholder="Name"/>
 
                 <label for="email-field">Email</label>
-                <input type="email" name="email" id="email-field" placeholder="Email"/>
+                <input type="email" name="email" id="email-field" placeholder="Email">
 
                 <label for="message-field">Message</label>
                 <textarea name="message" id="message-field" cols="30" rows="10" placeholder="Message"></textarea>
                 <button type="button">Send</button>
             </form>
-
         </div>
-
     </section>
 </main>
 <footer>
     <p>Business website opdracht © NOVI Hogeschool 2022</p>
 </footer>
-
 </body>
 </html>
