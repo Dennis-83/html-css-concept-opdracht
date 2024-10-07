@@ -12,20 +12,380 @@
     5. Media Queries
 ////////////////////////*/
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --chrysler-blue: #5722cd;
+    --majorelle-blue: #4b49e8;
+    --french-rose: #ed4385;
+    --night: #0c0c0c;
+    --magnolia: #f2f0ff;
+    --antiflash-white: #f3f6f9;
+    --gray: #7a7a7a;
+}
+
+button {
+    background-color: var(--french-rose);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 6px hsl(241, 78%, 30%);
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
 
-/* --------------- 3.1 Reusables ----------------------- */
+h1 {
+    font-size: 26px;
+}
 
-/* --------------- 3.2 Other --------------------------- */
+h3 {
+    font-size: 14px;
+    text-align: left;
+}
+
+h4 {
+    color: var(--chrysler-blue);
+    text-align: left;
+}
+
+header {
+    color: var(--antiflash-white);
+}
+
+nav a {
+    font-size: 10px;
+    color: var(--antiflash-white);
+    text-decoration: none;
+}
+
+button {
+    text-transform: uppercase;
+    color: var(--antiflash-white);
+    font-size: 10px;
+}
+
+.introduction-content h2 {
+    color: var(--chrysler-blue);
+    font-size: 19px;
+}
+
+.introduction-content h5 {
+    font-size: 12px;
+}
+
+.introduction-content a, .project-content a {
+    text-decoration: none;
+    color: var(--chrysler-blue);
+}
+
+.project-content a {
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.project-item-text p {
+    font-size: 8px;
+}
+
+.services-item p {
+    color: var(--gray);
+    font-size: 8px;
+    font-weight: 300;
+}
+
+.form-wrapper {
+    color: var(--antiflash-white);
+}
+
+.form-content p {
+    font-size: 10px;
+}
+
+::placeholder {
+    font-family: "Roboto", sans-serif;
+}
+
+footer p {
+    color: var(--antiflash-white);
+    font-size: 8px;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: linear-gradient(100deg, var(--majorelle-blue), var(--chrysler-blue));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    flex-direction: row;
+    /*border: 2px dashed blue;*/
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    /*border: 2px dashed purple;*/
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    flex-basis: 80px;
+    /*border: 2px solid cyan;*/
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 80px 0;
+    /*border: 2px dotted yellowgreen;*/
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    align-items: center;
+    justify-content: space-between;
+    /*border: 2px solid white;*/
+
+}
+
+.header-content h1 {
+    padding-bottom: 20px;
+}
+
+.header-content p {
+    padding-bottom: 20px;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    left: calc((100vw / 2) - 25px);
+    width: 50px;
+    height: 50px;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+.introduction-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    /*border: 2px solid rebeccapurple;*/
+}
+
+.introduction-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    justify-content: space-between;
+    /*border: 2px dashed darkgreen;*/
+}
+
+.introduction-content h2 {
+    padding-bottom: 20px;
+}
+
+.introduction-content h5 {
+    padding-top: 50px;
+}
+
+/* --------------- 4.3 Projects ------------------- */
+
+.project-wrapper {
+    background-color: var(--antiflash-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100vw;
+    margin: 50px 20px;
+    row-gap: 30px;
+    /*border: 2px dashed darkblue;*/
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*border: 2px solid fuchsia;*/
+}
+
+.project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-item:nth-child(even) .project-item-text {
+    margin-right: 10px;
+}
+
+.project-item img {
+    width: 100%;
+    display: flex;
+    /*border: 2px dot-dash chartreuse;*/
+}
+
+.project-item-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    justify-content: center;
+    margin-left: 10px;
+    /*border: 2px solid crimson;*/
+}
+
+.project-item-text-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 100px;
+    /*border: 2px dashed darkgray;*/
+}
+
+.project-item-text-inner-container img {
+    width: 20px;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-basis: 60vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+    box-shadow: 0px 4px 5px hsl(0, 0%, 50%);
+    /*border: 2px dotted lightblue;*/
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+.services-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    /*border: 2px dashed teal;*/
+}
+
+.services-content {
+    display: flex;
+    flex-basis: 800px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    /*border: 2px solid cornflowerblue;*/
+}
+
+.services-item {
+    flex-basis: 150px;
+    padding: 10px;
+    box-shadow: 4px 4px 5px hsl(0, 0%, 74%);
+    /*border: 2px dotted mediumvioletred;*/
+}
+
+.services-item p {
+    padding-top: 10px;
+}
+
+.services-item img {
+    width: 50px;
+}
+
+/* --------------- 4.5 Form ------------------- */
+
+.form-wrapper {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    background: linear-gradient(100deg, var(--majorelle-blue), var(--chrysler-blue));
+    /*border: 2px dashed darkgoldenrod;*/
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    /*border: 2px solid deepskyblue;*/
+}
+
+.form-content p {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+input {
+    padding: 10px 0;
+}
+
+::placeholder {
+    padding: 10px 10px;
+}
+
+label {
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.form-content p {
+    padding-top: 10px;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--night);
+}
+
+footer p {
+    flex-basis: 20px;
+    padding-top: 5px;
+}
